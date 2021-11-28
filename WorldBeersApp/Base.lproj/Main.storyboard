@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ibz-GN-DxJ">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Beers List-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Beers List" id="BYZ-38-t0r" customClass="ViewController" customModule="WorldBeersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-5D-ACg">
+                                <rect key="frame" x="7" y="140" width="375" height="684"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="684" id="Y7F-Og-VTa"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cella" rowHeight="200" id="DNi-3u-Jpx" customClass="BeerTableViewCell" customModule="WorldBeersApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNi-3u-Jpx" id="vHX-ux-thS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Descrizione" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="Ebm-YH-LVu">
+                                                    <rect key="frame" x="130" y="41" width="219" height="148"/>
+                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ibu" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sP1-ik-2a3">
+                                                    <rect key="frame" x="55" y="169" width="32" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="32" id="hir-eG-ttX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8pR-cN-te5">
+                                                    <rect key="frame" x="20" y="11" width="102" height="129"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IBU:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jzv-3Y-Qce">
+                                                    <rect key="frame" x="20" y="169" width="32" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="hLw-Nq-aWd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="x6z-d7-ELm">
+                                                    <rect key="frame" x="130" y="11" width="208" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="208" id="2xg-hE-3MF"/>
+                                                        <constraint firstAttribute="height" constant="26" id="VFQ-oo-Igz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abv" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oPh-qH-ltH">
+                                                    <rect key="frame" x="60" y="148" width="66" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ALC:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4iZ-O7-5Xn">
+                                                    <rect key="frame" x="20" y="148" width="64" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="1E8-l4-Cdb"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8pR-cN-te5" firstAttribute="top" secondItem="vHX-ux-thS" secondAttribute="topMargin" id="54X-Yw-Z5D"/>
+                                                <constraint firstItem="Jzv-3Y-Qce" firstAttribute="bottom" secondItem="vHX-ux-thS" secondAttribute="bottomMargin" id="5tE-qQ-d61"/>
+                                                <constraint firstItem="sP1-ik-2a3" firstAttribute="leading" secondItem="Jzv-3Y-Qce" secondAttribute="trailing" constant="3" id="Aik-TM-yHw"/>
+                                                <constraint firstItem="oPh-qH-ltH" firstAttribute="leading" secondItem="vHX-ux-thS" secondAttribute="leadingMargin" constant="40" id="Dku-B1-xHc"/>
+                                                <constraint firstItem="4iZ-O7-5Xn" firstAttribute="firstBaseline" secondItem="oPh-qH-ltH" secondAttribute="firstBaseline" id="Fhg-yn-XOB"/>
+                                                <constraint firstItem="Jzv-3Y-Qce" firstAttribute="top" secondItem="4iZ-O7-5Xn" secondAttribute="bottom" constant="1" id="HIO-gD-Px9"/>
+                                                <constraint firstItem="8pR-cN-te5" firstAttribute="top" secondItem="x6z-d7-ELm" secondAttribute="top" id="K8w-gM-saJ"/>
+                                                <constraint firstItem="8pR-cN-te5" firstAttribute="centerX" secondItem="sP1-ik-2a3" secondAttribute="centerX" id="LtF-W3-Rqp"/>
+                                                <constraint firstItem="x6z-d7-ELm" firstAttribute="leading" secondItem="8pR-cN-te5" secondAttribute="trailing" constant="8" symbolic="YES" id="Qx1-Ao-415"/>
+                                                <constraint firstItem="Ebm-YH-LVu" firstAttribute="leading" secondItem="oPh-qH-ltH" secondAttribute="trailing" constant="4" id="S7K-ZH-bIZ"/>
+                                                <constraint firstItem="Ebm-YH-LVu" firstAttribute="leading" secondItem="sP1-ik-2a3" secondAttribute="trailing" constant="43" id="Smh-sN-hds"/>
+                                                <constraint firstItem="Jzv-3Y-Qce" firstAttribute="firstBaseline" secondItem="sP1-ik-2a3" secondAttribute="firstBaseline" id="bAn-IH-MrP"/>
+                                                <constraint firstItem="4iZ-O7-5Xn" firstAttribute="baseline" secondItem="oPh-qH-ltH" secondAttribute="baseline" id="ba9-9U-Qbr"/>
+                                                <constraint firstItem="Ebm-YH-LVu" firstAttribute="top" secondItem="x6z-d7-ELm" secondAttribute="bottom" constant="4" id="bzt-FD-UWs"/>
+                                                <constraint firstItem="x6z-d7-ELm" firstAttribute="leading" secondItem="Ebm-YH-LVu" secondAttribute="leading" id="hcO-uo-976"/>
+                                                <constraint firstItem="sP1-ik-2a3" firstAttribute="bottom" secondItem="Ebm-YH-LVu" secondAttribute="bottom" id="jdO-ae-NtQ"/>
+                                                <constraint firstItem="Ebm-YH-LVu" firstAttribute="leading" secondItem="4iZ-O7-5Xn" secondAttribute="trailing" constant="46" id="lMZ-Yf-Cjo"/>
+                                                <constraint firstItem="4iZ-O7-5Xn" firstAttribute="leading" secondItem="Jzv-3Y-Qce" secondAttribute="leading" id="mep-Bt-Xx7"/>
+                                                <constraint firstItem="Jzv-3Y-Qce" firstAttribute="baseline" secondItem="sP1-ik-2a3" secondAttribute="baseline" id="s3S-9h-1T7"/>
+                                                <constraint firstItem="4iZ-O7-5Xn" firstAttribute="top" secondItem="8pR-cN-te5" secondAttribute="bottom" constant="8" symbolic="YES" id="spp-dI-YiK"/>
+                                                <constraint firstItem="8pR-cN-te5" firstAttribute="leading" secondItem="4iZ-O7-5Xn" secondAttribute="leading" id="wyK-Cp-UGj"/>
+                                                <constraint firstItem="8pR-cN-te5" firstAttribute="leading" secondItem="vHX-ux-thS" secondAttribute="leadingMargin" id="ySG-6v-fCR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="abvLabelCell" destination="oPh-qH-ltH" id="rk2-34-IgA"/>
+                                            <outlet property="descriptionLabelCell" destination="Ebm-YH-LVu" id="7Fx-nr-bM7"/>
+                                            <outlet property="ibuLabelCell" destination="sP1-ik-2a3" id="RFm-xg-HeE"/>
+                                            <outlet property="imageViewCell" destination="8pR-cN-te5" id="6a1-bf-7d6"/>
+                                            <outlet property="nameLabelCell" destination="x6z-d7-ELm" id="Egp-ox-g9T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search beer..." translatesAutoresizingMaskIntoConstraints="NO" id="5li-Gy-4of">
+                                <rect key="frame" x="0.0" y="88" width="390" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="ih3-5D-ACg" secondAttribute="bottom" constant="-14" id="1oa-hY-4Gy"/>
+                            <constraint firstItem="ih3-5D-ACg" firstAttribute="centerX" secondItem="5li-Gy-4of" secondAttribute="centerX" id="A3W-Qp-cAC"/>
+                            <constraint firstItem="5li-Gy-4of" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Cop-NM-XFY"/>
+                            <constraint firstItem="ih3-5D-ACg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="cU5-1g-IgQ"/>
+                            <constraint firstItem="ih3-5D-ACg" firstAttribute="top" secondItem="5li-Gy-4of" secondAttribute="bottom" constant="8" id="kA8-Ce-jvf"/>
+                            <constraint firstItem="ih3-5D-ACg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="okd-Qx-Ku8"/>
+                            <constraint firstItem="5li-Gy-4of" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w35-5L-foI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search beer" id="Ljo-qk-zmg"/>
+                    <connections>
+                        <outlet property="beersTableView" destination="ih3-5D-ACg" id="1fH-MI-gFs"/>
+                        <outlet property="searchBarView" destination="5li-Gy-4of" id="QfM-K8-8a8"/>
+                        <segue destination="lyO-kl-3rN" kind="show" identifier="beersListTOdetail" id="q8I-FD-VBY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2918.4615384615386" y="99.526066350710892"/>
+        </scene>
+        <!--Deteil Beer-->
+        <scene sceneID="Yrk-sQ-Bzk">
+            <objects>
+                <viewController title="Deteil Beer" modalPresentationStyle="fullScreen" id="lyO-kl-3rN" customClass="DetailViewController" customModule="WorldBeersApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rq7-ca-gde">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first_brewed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC0-Ky-z3x">
+                                <rect key="frame" x="16" y="219" width="358" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="ECr-ZS-1Sv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="food_pairing" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Plz-0v-qN3">
+                                <rect key="frame" x="16" y="391" width="358" height="122"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="qKt-bS-cFR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First brewed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yB-EI-cvN">
+                                <rect key="frame" x="16" y="148" width="358" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="SO7-ba-L52"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food pairing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwi-CF-56P">
+                                <rect key="frame" x="16" y="320" width="358" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="QBr-3j-VxT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brewers tips" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qq4-T7-e79">
+                                <rect key="frame" x="16" y="553" width="358" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="1UN-x1-6aL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Palatino-Bold" family="Palatino" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brewers_tips" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4rp-Ii-Aqh">
+                                <rect key="frame" x="16" y="624" width="358" height="126"/>
+                                <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lWI-1h-004"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qq4-T7-e79" firstAttribute="top" secondItem="Plz-0v-qN3" secondAttribute="bottom" constant="40" id="0eT-Ut-jBj"/>
+                            <constraint firstItem="6yB-EI-cvN" firstAttribute="leading" secondItem="GC0-Ky-z3x" secondAttribute="leading" id="4Js-9F-bK9"/>
+                            <constraint firstItem="Plz-0v-qN3" firstAttribute="trailing" secondItem="qq4-T7-e79" secondAttribute="trailing" id="5bf-Mz-6SG"/>
+                            <constraint firstItem="qq4-T7-e79" firstAttribute="leading" secondItem="4rp-Ii-Aqh" secondAttribute="leading" id="BYg-ml-fKY"/>
+                            <constraint firstItem="4rp-Ii-Aqh" firstAttribute="top" secondItem="qq4-T7-e79" secondAttribute="bottom" constant="10" id="CBw-L5-9IB"/>
+                            <constraint firstItem="Plz-0v-qN3" firstAttribute="top" secondItem="Zwi-CF-56P" secondAttribute="bottom" constant="10" id="DNU-uS-Rnd"/>
+                            <constraint firstItem="GC0-Ky-z3x" firstAttribute="top" secondItem="6yB-EI-cvN" secondAttribute="bottom" constant="10" id="Hod-ug-oeH"/>
+                            <constraint firstItem="6yB-EI-cvN" firstAttribute="trailing" secondItem="GC0-Ky-z3x" secondAttribute="trailing" id="RqA-Fl-E5C"/>
+                            <constraint firstItem="6yB-EI-cvN" firstAttribute="top" secondItem="lWI-1h-004" secondAttribute="top" constant="60" id="S5O-oX-t4F"/>
+                            <constraint firstItem="lWI-1h-004" firstAttribute="bottom" secondItem="4rp-Ii-Aqh" secondAttribute="bottom" constant="60" id="TXt-5A-cuz"/>
+                            <constraint firstItem="GC0-Ky-z3x" firstAttribute="top" secondItem="6yB-EI-cvN" secondAttribute="bottom" constant="10" id="a1d-7v-b2H"/>
+                            <constraint firstItem="GC0-Ky-z3x" firstAttribute="trailing" secondItem="Zwi-CF-56P" secondAttribute="trailing" id="eHm-eo-GxA"/>
+                            <constraint firstItem="4rp-Ii-Aqh" firstAttribute="top" secondItem="qq4-T7-e79" secondAttribute="bottom" constant="10" id="kIv-tA-Ml9"/>
+                            <constraint firstItem="Plz-0v-qN3" firstAttribute="top" secondItem="Zwi-CF-56P" secondAttribute="bottom" constant="10" id="lrP-jL-QI9"/>
+                            <constraint firstItem="GC0-Ky-z3x" firstAttribute="leading" secondItem="Zwi-CF-56P" secondAttribute="leading" id="mqB-MP-tci"/>
+                            <constraint firstItem="Zwi-CF-56P" firstAttribute="leading" secondItem="Plz-0v-qN3" secondAttribute="leading" id="p9o-zL-cbP"/>
+                            <constraint firstItem="qq4-T7-e79" firstAttribute="trailing" secondItem="4rp-Ii-Aqh" secondAttribute="trailing" id="qzD-f3-eMY"/>
+                            <constraint firstItem="6yB-EI-cvN" firstAttribute="leading" secondItem="rq7-ca-gde" secondAttribute="leadingMargin" id="r7F-2F-Uhh"/>
+                            <constraint firstItem="6yB-EI-cvN" firstAttribute="trailing" secondItem="rq7-ca-gde" secondAttribute="trailingMargin" id="rSO-x0-VGr"/>
+                            <constraint firstItem="Zwi-CF-56P" firstAttribute="top" secondItem="GC0-Ky-z3x" secondAttribute="bottom" constant="40" id="rbJ-rW-Yzf"/>
+                            <constraint firstItem="Zwi-CF-56P" firstAttribute="trailing" secondItem="Plz-0v-qN3" secondAttribute="trailing" id="tR2-R5-drz"/>
+                            <constraint firstItem="Plz-0v-qN3" firstAttribute="leading" secondItem="qq4-T7-e79" secondAttribute="leading" id="wxs-2T-ejc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title Beer" id="h2L-oj-96o"/>
+                    <connections>
+                        <outlet property="brewersTipsLabel" destination="4rp-Ii-Aqh" id="agv-Wg-xck"/>
+                        <outlet property="firstBrewedLabel" destination="GC0-Ky-z3x" id="kUc-Cp-loa"/>
+                        <outlet property="foodPairingLabel" destination="Plz-0v-qN3" id="3DE-p8-a2j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQb-Z4-NTM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3783.0769230769229" y="99.526066350710892"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vq2-P6-ev5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ibz-GN-DxJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="58y-t4-wE1">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XU1-pW-Cfh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tb3-3s-8mM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1989.2307692307691" y="99.526066350710892"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
