@@ -17,18 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-5D-ACg">
-                                <rect key="frame" x="7" y="140" width="375" height="684"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ih3-5D-ACg">
+                                <rect key="frame" x="7" y="140" width="376" height="684"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="684" id="Y7F-Og-VTa"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cella" rowHeight="200" id="DNi-3u-Jpx" customClass="BeerTableViewCell" customModule="WorldBeersApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="376" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNi-3u-Jpx" id="vHX-ux-thS">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Descrizione" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="Ebm-YH-LVu">
@@ -120,7 +120,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" placeholder="Search beer..." translatesAutoresizingMaskIntoConstraints="NO" id="5li-Gy-4of">
-                                <rect key="frame" x="0.0" y="88" width="390" height="44"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="52"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
@@ -133,6 +133,7 @@
                             <constraint firstItem="ih3-5D-ACg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="cU5-1g-IgQ"/>
                             <constraint firstItem="ih3-5D-ACg" firstAttribute="top" secondItem="5li-Gy-4of" secondAttribute="bottom" constant="8" id="kA8-Ce-jvf"/>
                             <constraint firstItem="ih3-5D-ACg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="okd-Qx-Ku8"/>
+                            <constraint firstItem="ih3-5D-ACg" firstAttribute="top" secondItem="5li-Gy-4of" secondAttribute="bottom" id="qp7-dr-yz6"/>
                             <constraint firstItem="5li-Gy-4of" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="w35-5L-foI"/>
                         </constraints>
                     </view>

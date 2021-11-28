@@ -7,6 +7,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
     // Variabile per memorizzare la birra cliccata tra quelle nella tabella
@@ -25,6 +26,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         beersTableView.delegate = self
         beersTableView.dataSource = self
         searchBarView.delegate = self
+        
+        searchBarView.searchTextField.backgroundColor = UIColor.white
+        searchBarView.barTintColor = UIColor.lightGray
+        searchBarView.tintColor = UIColor.black
+        
+        if let textField = searchBarView.value(forKey: "searchField") as? UITextField {
+            textField.attributedPlaceholder = NSAttributedString(string: textField.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black])
+            
+            if let leftView = textField.leftView as? UIImageView {
+                leftView.image = leftView.image?.withRenderingMode(.alwaysTemplate)
+                leftView.tintColor = UIColor.black
+            }
+        }
         
         loadBeersData()
     }
