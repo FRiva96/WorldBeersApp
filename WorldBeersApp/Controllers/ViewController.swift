@@ -69,12 +69,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.abvLabelCell.text = beersList[indexPath.row].abv + "% VOL."
         cell.ibuLabelCell.text = beersList[indexPath.row].ibu
         
-        let image = try! Data(contentsOf: URL(string: beersList[indexPath.row].imageUrl)!)
-        cell.imageViewCell.image = UIImage(data: image)
         cell.imageViewCell.layer.borderColor = UIColor.black.cgColor
         cell.imageViewCell.layer.borderWidth = 1
         cell.imageViewCell.layer.cornerRadius = 30
         cell.imageViewCell.backgroundColor = UIColor.lightGray
+        
+        // caricamento asincrono delle immagini
+        if let url = NSURL(string: beersList[indexPath.row].imageUrl) {
+            DispatchQueue.global(qos: .default).async{
+                if let data = NSData(contentsOf: url as URL) {
+                    DispatchQueue.main.async {
+                        cell.imageViewCell.image = UIImage(data: data as Data)
+                    }
+                }
+            }
+        }
         
         return cell
     }

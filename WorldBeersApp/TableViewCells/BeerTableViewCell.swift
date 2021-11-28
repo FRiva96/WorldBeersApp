@@ -30,7 +30,6 @@ class BeerTableViewCell: UITableViewCell {
         descriptionLabelCell.numberOfLines = 0
         descriptionLabelCell.adjustsFontSizeToFitWidth = true
         descriptionLabelCell.minimumScaleFactor = 0.5
-    
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
